@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="box">
+    <div class="image">
+      <img src="/assets/img_onboarding_illustration3@1.5x.png" />
+    </div>
+    <div class="content">
+      <div class="head">Seamless&nbsp;workflow</div>
+      <div class="para">
+        Sync&nbsp;rosters,create&nbsp;and&nbsp;assign&nbsp;impactful&nbsp;video<br />experiences,enrich&nbsp;your&nbsp;flipped&nbsp;classroom&nbsp;and<br />streamline&nbsp;tedious&nbsp;grading
+      </div>
+      <div class="page">
+        <img src="/assets/Pagination.png" />
+      </div>
+    </div>
+    <div class="innerBox">
+      <div class="logo">
+        <img src="/assets/img_virtuallearn logo_splash 2.png" />
+      </div>
+      <div class="details">
+        <div class="welcome">Welcome&nbsp;Back!</div>
+        <div class="easy">
+          Easy&nbsp;to&nbsp;learn&nbsp;anytime&nbsp;and&nbsp;any&nbsp;where.<br />Login&nbsp;to&nbsp;your&nbsp;account
+        </div>
+      </div>
+      <div class="buttons">
+        <img src="/assets/btn_SM_facebook.png" />
+        <img src="/assets/btn_SM_google.png" />
+      </div>
+      <div class="form">
+        <form [formGroup]="loginForm">
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>User name</mat-label>
+              <input matInput type="text" formControlName="userName" />
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Enter your password</mat-label>
+              <input
+                matInput
+                [type]="hide ? 'password' : 'text'"
+                formControlName="password"
+              />
+              <button
+                mat-icon-button
+                matSuffix
+                (click)="hide = !hide"
+                [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide"
+              >
+                <mat-icon>{{
+                  hide ? "visibility_off" : "visibility"
+                }}</mat-icon>
+              </button>
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+      <div class="login">
+        <button [disabled]="!loginForm.valid" (click)="userLogin()">
+          Continue
+        </button>
+      </div>
+      <div class="register">Dont have a account?<span>register</span></div>
+    </div>
+  </div>
+</div>

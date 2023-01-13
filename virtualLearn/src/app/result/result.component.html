@@ -1,0 +1,76 @@
+<div>
+  <div>
+    <app-home-page></app-home-page>
+  </div>
+  <div class="box">
+    <div class="module" routerLink="/overview">
+      {{ quizDetails.test.testTitle }}&nbsp;{{ quizDetails.test.testNumber }}
+    </div>
+    <div class="score">
+      <div class="mark">{{ marks }}</div>
+      <div>
+        <div class="chap">
+          Chapter {{ quizDetails.chapterNumber }}:&nbsp;{{
+            quizDetails.chapterTitle
+          }}
+        </div>
+        <div class="line">Course:&nbsp;{{ courseTitle }}</div>
+        <div class="scoreBoard">
+          <div>
+            <div class="grade">Passing Grade</div>
+            <div class="attend">{{ grade }}</div>
+          </div>
+          <div>
+            <div class="grade">correct</div>
+            <div class="attend">{{ correct }}</div>
+          </div>
+          <div>
+            <div class="grade">Wrong</div>
+            <div class="attend">{{ wrong }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="fill">
+    <div class="list" (click)="openDialog()">List of Questions</div>
+    <div class="align" *ngFor="let qn of details.questions; index as i">
+      <div>
+        <div class="qn">{{ qn }}</div>
+        <div
+          class="ans"
+          *ngIf="
+            details.selectedAndActualAnswerSet[i][0] ==
+            details.selectedAndActualAnswerSet[i][1]
+          "
+        >
+          Correct Answer
+        </div>
+        <div
+          class="ans wrong"
+          *ngIf="
+            details.selectedAndActualAnswerSet[i][0] !=
+            details.selectedAndActualAnswerSet[i][1]
+          "
+        >
+          Wrong Answer
+        </div>
+      </div>
+      <div>
+        <mat-icon class="arrow" (click)="openParticular(i)"
+          >arrow_forward_ios</mat-icon
+        >
+      </div>
+    </div>
+    <!-- <div class="align">
+            <div>
+                <div class="qn ">Question2</div>
+                <div class="ans wrong">Wrong Answer</div>
+            </div>
+            <div>
+                <mat-icon class="arrow">arrow_forward_ios</mat-icon>
+            </div>
+            
+        </div> -->
+  </div>
+</div>

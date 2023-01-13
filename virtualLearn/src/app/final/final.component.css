@@ -1,0 +1,76 @@
+.fill{
+    position: absolute;
+    top:7rem;
+    left:8%;
+    right:8%;
+    
+   
+}
+.image{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+}
+.image img{
+    width:90%;
+}
+.congro{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 700;
+font-size: 3rem;
+line-height: 3.75rem;
+text-align: center;
+
+color: #2B2B2B
+}
+.cline{
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.875rem;
+text-align: center;
+
+color: #7A7A7A;
+}
+span{
+    font-weight: 700;
+    color:#000;
+}
+.percent{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 400;
+font-size: 4rem;
+line-height: 5rem;
+text-align: center;
+
+color: #1EAB0D;
+
+
+}
+.app{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 1.875rem;
+text-align: center;
+
+color: #7A7A7A;
+
+
+}
+.res{
+    margin-block-start: 7%;
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 700;
+font-size: 1.5rem;
+line-height: 1.875rem;
+text-align: center;
+
+color: #EE5C4D;
+cursor:pointer;
+}

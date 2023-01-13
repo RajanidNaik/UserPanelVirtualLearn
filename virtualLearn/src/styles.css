@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import url(//db.onlinewebfonts.com/c/e5d18e657f83f8750cd54c899de3a38b?family=Biko);
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Proxima+Nova');
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.trans .mat-dialog-container{
+  
+    background: #FFFFFF;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+border-radius: 8px;
+height: fit-content;
+
+margin:2%;
+
+
+
+  }
+  .full-screen-modal .mat-dialog-container {
+    max-width: none;
+    background: transparent;
+    background: #2B2B2B;
+  }

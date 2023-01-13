@@ -1,0 +1,341 @@
+<div>
+    <div>
+      <app-home-page></app-home-page>
+    </div>
+    <div class="fill">
+      <div class="my" *ngIf="overview">My&nbsp;course&nbsp;&#10095;&nbsp;<small>Ongoing</small></div>
+      <!--chapter-->
+      <div class="my" *ngIf="chapter">My&nbsp;course&nbsp;&#10095;&nbsp;Ongoing&nbsp;&#10095;&nbsp;<small>Learn Figma - UI/UX Design Essential Training</small></div>
+      <!---->
+      <div class="video" *ngIf="overview">
+        <video controls width="100%" height="100%">
+          <source src="" type="video/mp4" />
+          <source src="" type="video/ogg" />
+        </video>
+      </div>
+      <!--chapter-->
+      <div class="video" *ngIf="chapter">
+          <video controls width="100%" height="100%">
+            <source src="" type="video/mp4" />
+            <source src="" type="video/ogg" />
+           
+          </video>
+          <div class="videoButton">
+              <button>Continue Chapter 3 Lesson 21</button>
+          </div>
+          <div class="playButton">
+              <div class="btnline">Your lesson paused at 1.21
+                  Do you want to continue watching?</div>
+                  <div class="watch">
+                      <button>Continue&nbsp;watching</button>
+                  </div>
+                  <div class="pause">
+                      <button>Watch&nbsp;from&nbsp;beginning</button>
+                  </div>
+          </div>
+         
+        </div>
+  
+        <!---->
+      <div class="align">
+        <div>
+          <div class="figma">
+            Learn&nbsp;Figma-UI/Ux&nbsp;Design&nbsp;Essential&nbsp;training
+          </div>
+          <div class="seven">7&nbsp;Chapter&nbsp;|&nbsp;46&nbsp;lessons</div>
+        </div>
+        <div class="btn">
+          <button>Design</button>
+        </div>
+      </div>
+      <div *ngIf="chapter">
+        <div *ngIf="complete" class="comp">
+            <div>
+                <div class="res">Course&nbsp;Result</div>
+                <div class="nine">90%</div>
+                <div class="rate">approval&nbsp;rate</div>
+            </div>
+            <div class="sline"></div>
+            <div class="join">
+                <div>
+                    <div class="joined">Joined</div>
+                    <div class="date">02/04/2021</div>
+                </div>
+                <div>
+                    <div class="joined">Completed</div>
+                    <div class="date">02/04/2021</div>
+                </div>
+                <div>
+                    <div class="joined">Duration</div>
+                    <div class="date">4h&nbsp;30m</div>
+                </div>
+            </div>
+            <div class="sline"></div>
+            <div class="certi">
+               
+                <div class="certiImg">
+                    <div class="down">
+                        <div class="cocerti">Course Certificate</div>
+                        <mat-icon class="csave">save_alt</mat-icon>
+                    </div>
+                    <img src="/assets/certificate-of-completion-_Virtuallearn2 1.png">
+                </div>
+                
+            </div>
+        </div>
+      </div>
+      <div class="line" *ngIf="overview"></div>
+      <div class="content" *ngIf="overview">
+        Learn how to design a beautiful and engaging mobile app with Figma.
+        Learn-by-doing approach. Learn how to design a beautiful and engaging
+        mobile app with Figma. Learn-by-doing approach.
+      </div>
+      <div class="detail" *ngIf="overview">
+        Figma is a very powerful application that runs online. There are virtually
+        no platform boundaries when it comes to using figma because you can design
+        within a web browser or using their desktop application made for windows
+        and macs. Figma is similar to Sketch and Adobe XD but is the more powerful
+        of the three when it comes. Figma is a very powerful application that runs
+        online. There are virtually no platform boundaries when it comes to using
+        figma because you can design within a web browser or using their desktop
+        application made for windows and macs...
+        <div (click)="showMore()">
+          <span *ngIf="!more">Show&nbsp;more</span>
+          <div *ngIf="more">
+            Figma is a very powerful application that runs online. There are
+            virtually no platform boundaries when it comes to using figma because
+            you can design within a web browser or using their desktop application
+            made for windows and macs. Figma is similar to Sketch and Adobe XD but
+            is the more powerful of the three when it comes. Figma is a very
+            powerful application that runs online. There are virtually no platform
+            boundaries when it comes to using figma because you can design within
+            a web browser or using their desktop application made for windows and
+            macs...
+          </div>
+        </div>
+        <div (click)="showMore()" class="span" *ngIf="more">Show&nbsp;less</div>
+      </div>
+      <div class="box">
+        <div class="boxDetail">
+          <div [class.active]="overview" (click)="onOverview()">Overview</div>
+          <div [class.active]="chapter" (click)="onChapter()">Chapters</div>
+        </div>
+        <div *ngIf="overview">
+          <div class="include">Course&nbsp;Includes</div>
+          <div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course.png"
+              />
+              <div class="in">3.5&nbsp;total&nbsp;hours&nbsp;video</div>
+            </div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course(1).png"
+              />
+              <div class="in">Support&nbsp;Files</div>
+            </div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course(2).png"
+              />
+              <div class="in">6 Module&nbsp;Test</div>
+            </div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course(3).png"
+              />
+              <div class="in">Full&nbsp;lifetime&nbsp;access</div>
+            </div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course(4).png"
+              />
+              <div class="in">
+                Access&nbsp;on&nbsp;mobile,&nbsp;desktop&nbsp;and&nbsp;tv
+              </div>
+            </div>
+            <div class="inside">
+              <img
+                src="/assets/08.2_VirtualLearn_Home_categories_design_course(5).png"
+              />
+              <div class="in">Certificate&nbsp;of&nbsp;Completion</div>
+            </div>
+          </div>
+          <div class="include">What&nbsp;you’ll&nbsp;learn</div>
+          <div class="inside">
+            <img src="/assets/Combined-Shape.png" />
+            <div class="learn">Design Websites</div>
+          </div>
+          <div class="inside">
+            <img src="/assets/Combined-Shape.png" />
+            <div class="learn">
+              You will have a fully interactive design and prototype at the end of
+              this course
+            </div>
+          </div>
+          <div class="inside">
+            <img src="/assets/Combined-Shape.png" />
+            <div class="learn">Design mobile and desktop apps</div>
+          </div>
+          <div class="inside">
+            <img src="/assets/Combined-Shape.png" />
+            <div class="learn">
+              You will learn how to reuse design elements for future projects
+            </div>
+          </div>
+          <div class="include">Requirements</div>
+          <div>
+            <li>Internet Access</li>
+            <li>You should know your way around comouter basics</li>
+          </div>
+          <div class="include">Instructor</div>
+          <div>
+            <div class="space">
+              <img src="/assets/img_instructor1 copy@3x 1.png" />
+              <div class="name">
+                <div class="sirName">Dean Mathew</div>
+                <div class="link">
+                  User Interface teacher www.appledesigntips.com
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about">
+            Back in 2010, I started brainspin with a desire to design compelling
+            and engaging apps. For over 7 years, I have designed many high profile
+            web and iPhone applications. The applications range from 3D medical
+            aided web applications to project management applications for niche
+            industries.
+          </div>
+          <div class="about">
+              I am also the founder of a large local design organization, Salt Lake
+              Designers, where I and other local influencers help cultivate the
+              talents of up and coming UX designers through workshops and panel
+              discussions... <span>SHOW MORE</span>
+            </div>
+            <div class="join">
+              <button>Join&nbsp;course</button>
+            </div>
+        </div>
+        <div *ngIf="chapter">
+          <div class="include">Course Content</div>
+          <div class="course">7 Chapter | 46 lessons | 6 Assignment Test | 3.5h
+              total length</div>
+              
+        
+        <div class="chapterList">
+          <div class="add">
+               <div class="chap">Chapter 1 - Introduction to the course</div>
+               <div class="more" (click)="show()">
+                  <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+                  <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+                </div>
+          </div>
+          <div class="add">
+              <div class="chap">Chapter 2 - Learning the Figma Interface</div>
+              <div class="more" (click)="show()">
+                  <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+                  <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+                </div>
+         </div>
+         <div class="add">
+          <div class="chapOn">Chapter 3 - Setting up a new project</div>
+          <div class="more" (click)="show()">
+              <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+              <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+            </div>
+     </div>
+     <mat-stepper orientation="vertical" *ngIf="shows">
+      <mat-step>
+        <ng-template matStepLabel>
+          <div class="step">
+              <div class="ten">20</div>
+              <div >
+                  <div class="tenline">Creating a New Project and
+                      File</div>
+                      <div class="min">01.38 mins</div>
+              </div>
+              <div>
+                  <img src="/assets/Red Play.png">
+              </div>
+          </div>
+        </ng-template>
+        <ng-template matStepperIcon="edit">
+          <mat-icon class="st">check</mat-icon>
+     </ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>
+          <div class="step">
+              <div class="ten">21</div>
+              <div >
+                  <div class="tenline">Importing Sketch Files
+                      File</div>
+                      <div class="min">02.45 mins</div>
+              </div>
+              <div>
+                  <img src="/assets/Red Play.png">
+              </div>
+          </div>
+        </ng-template>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>
+          <div class="step">
+              <div class="ten">22</div>
+              <div >
+                  <div class="tenline">Working with Teams
+                      File</div>
+                      <div class="min">03.41 mins</div>
+              </div>
+              <div>
+                  <img src="/assets/grey play.png">
+              </div>
+          </div>
+        </ng-template>
+      </mat-step>
+      <mat-step>
+          <ng-template matStepLabel>
+            <div class="step">
+                <div class="ten">
+                 <img src="/assets/Shape.png">
+                </div>
+                <div routerLink="/quiz">
+                    <div class="tenline">Module Test 2
+                        </div>
+                        <div class="min">10 mins | 25 Questions</div>
+                </div>
+  
+            </div>
+          </ng-template>
+        </mat-step>
+    </mat-stepper>
+    <div class="add">
+      <div class="chapOn">Chapter 4 - Adding and Editing Content</div>
+      <div class="more" (click)="show()">
+          <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+          <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+        </div>
+  </div>
+  <div class="add">
+      <div class="chapOn">Chapter 5 - Completing the Design</div>
+      <div class="more" (click)="show()">
+          <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+          <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+        </div>
+  </div>
+  <div class="add">
+      <div class="chapOn">Chapter 6 - Prototyping, Sharing and
+          Exporting</div>
+      <div class="more" (click)="show()">
+          <mat-icon *ngIf="!shows" class="plus">add</mat-icon >
+          <mat-icon *ngIf="shows" class="plus"> remove</mat-icon>
+        </div>
+  </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,124 @@
+/* .container{
+    width: 100%;
+    height: 100%;
+    background: none;
+} */
+.close {
+  float: right;
+  color: #fff;
+  cursor: pointer;
+ 
+}
+/* .fill{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    top:20%;
+} */
+.align {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  gap: 35vw;
+}
+
+/* .image img{
+    width: 100%;
+} */
+.course1 {
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+  line-height: 1rem;
+  color: #ffffff;
+
+  width: 100%;
+}
+.save {
+  color: #ffffff;
+  cursor: pointer;
+}
+.dialogBox {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 30%;
+  width: 50%;
+  height: fit-content;
+  background: #ffffff;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.17));
+  border-radius: 6px;
+  border: 0.01px solid rgb(255, 236, 236);
+}
+
+.para {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: start;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 3%;
+}
+.name {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: start;
+  margin: 3%;
+  color: #ee5c4d;
+}
+.course {
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 28px;
+  line-height: 32px;
+  text-align: start;
+  margin-left: 3%;
+  color: #000;
+}
+.time {
+  display: flex;
+  gap: 1%;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: start;
+  color: rgba(0, 0, 0, 0.7);
+  margin-left: 3%;
+  margin-block-start: 5%;
+}
+.footer {
+  width: 100%;
+  margin-block-start: 5%;
+  background: #042c5c;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.image {
+  width: 15%;
+  margin: 1%;
+}
+.cup {
+  position: absolute;
+  top: 60%;
+  left: 80%;
+  z-index: 1;
+}
+.cup img {
+  width: 95%;
+}
+.iframe{
+    width:100%;
+   height: 100vh;
+    border: 1px solid #000;
+}

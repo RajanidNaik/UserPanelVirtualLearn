@@ -1,0 +1,277 @@
+.head {
+  position: absolute;
+  width: 100vw;
+  height: 5rem;
+  left: 0%;
+  top: 0%;
+  background: #092963;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 8%;
+  margin-block-start: 1%;
+  cursor: pointer;
+}
+.logo img {
+  width: 90%;
+}
+.searchBar {
+  align-items: center;
+  box-sizing: border-box;
+  height: 50%;
+  width: 40vw;
+  opacity: 1;
+  background: #123779;
+  border-radius: 57px;
+}
+
+.searchIcon {
+  color: #fff;
+  opacity: 0.5;
+  background: #244f9c;
+  border-radius: 20px;
+  /* width: 68px;
+height: 44px; */
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+}
+.searchBar ::placeholder {
+  color: white;
+  height: 5%;
+  opacity: 0.5;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+}
+.display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1%;
+  gap: 2%;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 8%;
+}
+.profile mat-icon {
+  color: #fff;
+}
+.profile img {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+.sideBar {
+  position: absolute;
+  right: 0%;
+  top: 7%;
+  width: 10rem;
+  height: fit-content;
+  background: #ffffff;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: all 1s ease-in;
+  visibility: hidden;
+  z-index: 1;
+}
+.hide {
+  visibility: visible;
+  right: 3%;
+  transition: all 1s ease-in;
+}
+
+.side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  margin: 3%;
+  cursor: pointer;
+}
+.side img {
+  cursor: pointer;
+}
+.line {
+  border-bottom: 1px solid #042c5c;
+  opacity: 0.1;
+}
+.my {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+
+  text-align: right;
+
+  color: #373737;
+}
+.searchCourse {
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  height: 40rem;
+  background-color: #092963;
+  z-index: 2;
+}
+.search {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+.search img {
+  width: 5em;
+}
+.searchContent {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+  height: fit-content;
+  width: 43%;
+}
+.searchBox {
+  width: 9vw;
+
+  background: #ffffff;
+  mix-blend-mode: normal;
+  border-radius: 6px;
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: #373737;
+  margin-block-end: 2%;
+  padding: 1%;
+}
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2%;
+  cursor: pointer;
+  margin: 1%;
+}
+.top {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+
+  color: #ffffff;
+  margin-block-end: 2%;
+  margin-block-start: 1%;
+}
+.dalign {
+  display: flex;
+  align-items: center;
+  gap: 3%;
+
+  cursor: pointer;
+}
+.dalign img {
+  width: 1.5em;
+  height: 1.5em;
+  /* margin:1%; */
+}
+.imageAlign {
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+}
+.market {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.total {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #ffffff;
+
+  opacity: 0.3;
+}
+.sAlign {
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  border-bottom: 1px solid #1e4284;
+  margin-block-start: 2%;
+  width: 100%;
+}
+.sAlign img {
+  width: 9em;
+  height: 7em;
+  background: #c8c8c8;
+  border-radius: 6px;
+}
+.border {
+  border: 1px solid #1e4284;
+  margin-block-start: 2%;
+}
+.ifCourse {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  margin-block-end: 2%;
+  margin-block-start: 5%;
+}
+.try {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 20px;
+  color: #ffffff;
+  opacity: 0.5;
+  text-align: center;
+  margin-block-end: 2%;
+}
+.scroll {
+  height: 35rem;
+  overflow: scroll;
+  cursor: pointer;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+.clean {
+  color: #fff;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.act {
+  background-color: #fcbe4b;
+}
+/* .searchBox:hover{
+    background-color: #FCBE4B;
+  } */

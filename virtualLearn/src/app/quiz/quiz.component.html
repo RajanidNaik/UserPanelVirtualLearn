@@ -1,0 +1,94 @@
+<div>
+  <div>
+    <app-home-page></app-home-page>
+  </div>
+  <div class="fill">
+    <div>
+      <div class="align">
+        <div class="module">{{ quizDetails.test.testTitle }}</div>
+        <mat-icon class="clean" (click)="openClose()">clear</mat-icon>
+      </div>
+      <div class="questions">
+        <div class="align">
+          <div class="qn">
+            Question&nbsp;{{ qIndex + 1 }}&nbsp;of&nbsp;{{ totalQuestion }}
+          </div>
+          <div class="clock">
+            <mat-icon class="alarm">alarm</mat-icon>
+            <div class="module">{{ counter | time }}&nbsp;remaining</div>
+          </div>
+        </div>
+        <div>
+          <!-- <div class="qnName">How to create dot-matrix in Figma without doing it dot-by-dot?</div> -->
+          <div class="qnName">{{ questions[qIndex] }}</div>
+          <!-- <div class="option" *ngFor="let option of options[qIndex];index as i">
+                    <div class="opt-1"  (click)="onSelect(i)"  [class.select]="select[i]">
+                        <mat-icon *ngIf="!select[i]"  class="first">radio_button_unchecked</mat-icon>
+                        <mat-icon *ngIf="select[i]" class="second">check_circle</mat-icon>
+                        <div>{{option}}</div>
+                    </div>
+                   
+                </div> -->
+          <!---->
+          <div *ngFor="let choice of options[qIndex]; index as i">
+            <div
+              (click)="selectedChoice(i)"
+              class="choice"
+              [style.background-color]="
+                show == i || answers[qIndex] == i ? '#EC5D52' : 'transparent'
+              "
+              [style.color]="show == i || answers[qIndex] == i ? '#fff' : 'red'"
+              (click)="changeTableRowColor(i)"
+            >
+              <div
+                class="choiceIcon"
+                *ngIf="
+                  (chooseIndex != i || click == false) && answers[qIndex] != i
+                "
+              >
+                <mat-icon>radio_button_unchecked </mat-icon>
+              </div>
+              <div
+                class="selectedchoiceIcon"
+                *ngIf="
+                  (chooseIndex == i && click == true) || answers[qIndex] == i
+                "
+              >
+                <mat-icon>check_circle</mat-icon>
+              </div>
+              <div>
+                <div
+                  class="choiceContent"
+                  [class.color]="
+                    (chooseIndex == i && click == true) || answers[qIndex] == i
+                  "
+                >
+                  {{ choice }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div>
+            <div class="buttons">
+              <div class="chapName">
+                <div>Chapter {{ quizDetails.chapterNumber }}</div>
+                <div>{{ quizDetails.chapterTitle }}</div>
+              </div>
+              <div *ngIf="this.qIndex">
+                <mat-icon (click)="previous()">arrow_back</mat-icon>
+              </div>
+              <div *ngIf="!(this.qIndex + 1 == totalQuestion)">
+                <mat-icon (click)="next()">arrow_forward</mat-icon>
+              </div>
+              <div *ngIf="this.qIndex + 1 == totalQuestion">
+                <button (click)="submitTest()">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

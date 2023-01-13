@@ -1,0 +1,231 @@
+<div class="container">
+  <div>
+    <app-home-page></app-home-page>
+  </div>
+  <div class="hello">Hello!</div>
+  <div class="dhoni">{{ name }}</div>
+  <div class="fill">
+    <div class="content">
+      <div class="onBox" *ngFor="let course of banner">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="cTitle">{{ course.courseTitle }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="dot">
+      <img src="/assets/Ellipse 2.png" />
+      <img src="/assets/Ellipse 3.png" />
+      <img src="/assets/Ellipse 3.png" />
+      <img src="/assets/Ellipse 3.png" />
+      <img src="/assets/Ellipse 3.png" />
+    </div>
+    <div class="lines">
+      <div>Ongoing&nbsp;course</div>
+      <div class="see">See&nbsp;All</div>
+    </div>
+    <div class="content">
+      <!-- <div class="onBox" >
+                <img src="/assets/Card 1.png">
+            </div> -->
+      <div class="onBox" *ngFor="let course of onGoing">
+        <div class="div-image">
+          <img src="{{ course.url }}" />
+          <div class="onImage">
+            <div class="go">
+              <div>
+                <div class="line">{{ course.title }}</div>
+                <div class="chapter">
+                  {{ course.chaptersCompleted }}/{{
+                    course.totalChapters
+                  }}&nbsp;Chapters
+                </div>
+              </div>
+              <div class="conti">
+                <button
+                  (click)="
+                    getCourseId(course.courseId, course.title, course.url)
+                  "
+                >
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lines onGo">
+      Categories
+      <div class="see">See&nbsp;All</div>
+    </div>
+    <div class="design">
+      <!-- <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png">
+            <img src="/assets/Design.png"> -->
+      <div class="searchBox" *ngFor="let cat of category; index as i">
+        <div>
+          <img src="/assets/icn_categories suggestion_design.png" />
+        </div>
+
+        <div>{{ cat }}</div>
+      </div>
+    </div>
+
+    <div class="lines onGo">
+      Choice&nbsp;your&nbsp;course
+      <div class="see" routerLink="/seeAll">See&nbsp;All</div>
+    </div>
+    <div class="btn">
+      <div>
+        <button (click)="getChoiceCourse('All')" [class.act]="all">All</button>
+      </div>
+      <div>
+        <button (click)="getChoiceCourse('Popular')" [class.act]="popular">
+          popular
+        </button>
+      </div>
+      <div>
+        <button (click)="getChoiceCourse('Newest')" [class.act]="newest">
+          Newest
+        </button>
+      </div>
+    </div>
+    <div class="content" *ngIf="all">
+      <div class="onBox" *ngFor="let course of choice">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="onImage1">
+            <div class="cCat">
+              <div>{{ course.category }}</div>
+            </div>
+            <div class="go cover">
+              <div>
+                <div class="line1">
+                  {{ course.courseTitle }}
+                </div>
+                <div class="chapter1">
+                  {{ course.courseContent.totalChapters }}&nbsp;Chapters
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" *ngIf="popular">
+      <div class="onBox" *ngFor="let course of choice">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="onImage1">
+            <div class="cCat">
+              <div>{{ course.category }}</div>
+            </div>
+            <div class="go cover">
+              <div>
+                <div class="line1">
+                  {{ course.courseTitle }}
+                </div>
+                <div class="chapter1">
+                  {{ course.courseContent.totalChapters }}&nbsp;Chapters
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" *ngIf="newest">
+      <div class="onBox" *ngFor="let course of choice">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="onImage1">
+            <div class="cCat">
+              <div>{{ course.category }}</div>
+            </div>
+            <div class="go cover">
+              <div>
+                <div class="line1">
+                  {{ course.courseTitle }}
+                </div>
+                <div class="chapter1">
+                  {{ course.courseContent.totalChapters }}&nbsp;Chapters
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lines onGo">
+      Top&nbsp;courses&nbsp;in&nbsp;business
+      <div class="see">See&nbsp;All</div>
+    </div>
+    <div class="content">
+      <div class="onBox" *ngFor="let course of business">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="onImage1">
+            <div class="go cover">
+              <div>
+                <div class="line1">
+                  {{ course.courseTitle }}
+                </div>
+                <div class="timeAlign">
+                  <div class="chapter1">
+                    {{ course.courseContent.totalChapters }}&nbsp;Chapters
+                  </div>
+                  <div class="acat">
+                    <mat-icon class="alaram">access_time</mat-icon>
+                    <div class="chapter1 cd">
+                      {{ course.courseContent.totalDuration | duration }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <div class="lines onGo">
+      Top&nbsp;courses&nbsp;in&nbsp;design
+      <div class="see">See&nbsp;All</div>
+    </div>
+    <div class="content">
+      <div class="onBox" *ngFor="let course of design">
+        <div class="div-image">
+          <img src="{{ course.courseImage }}" />
+          <div class="onImage1">
+            <div class="go cover">
+              <div>
+                <div class="line1">
+                  {{ course.courseTitle }}
+                </div>
+                <div class="timeAlign">
+                  <div class="chapter1">
+                    {{ course.courseContent.totalChapters }}&nbsp;Chapters
+                  </div>
+                  <div class="acat">
+                    <mat-icon class="alaram">access_time</mat-icon>
+                    <div class="chapter1 cd">
+                      {{ course.courseContent.totalDuration | duration }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

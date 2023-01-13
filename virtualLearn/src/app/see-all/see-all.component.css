@@ -1,0 +1,150 @@
+.fill {
+    position: absolute;
+    top: 7rem;
+    left: 6%;
+    right: 6%;
+  }
+  .lines {
+    font-family: "Biko";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 3.125rem;
+    display: flex;
+    justify-content: space-between;
+  
+    color: #000000;
+  }
+  .see {
+    font-family: "Proxima Nova Soft";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 3.125rem;
+   
+  
+    color: #7a7a7a;
+  }
+  .design {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    flex-wrap: wrap;
+  }
+  .design img {
+    background: #e5e5e5;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+  }
+  .searchBox {
+    display: flex;
+    align-items: center;
+    padding: 0.5% 1%;
+  
+    background-color: white;
+    border-radius: 6px;
+  
+    border: 1px solid #e4e4e4;
+    min-width: fit-content;
+    margin-right: 1.5em;
+    margin-bottom: 1.5em;
+    color: #2b2b2b;
+    cursor: pointer;
+  }
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  
+   
+  }
+  .onBox {
+    display: flex;
+    justify-content: space-between;
+   
+    margin-right: 2.2%;
+    height: 13vw;
+   
+    margin-block-end: 10rem;
+    
+  
+  }
+  .div-image {
+    width: 20vw;
+   
+   
+  }
+  
+  .div-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    filter: brightness(90%);
+  }
+  .onImage1 {
+    
+  
+    width: 100%;
+  }
+  .chapter1 {
+    font-family: "Proxima Nova Soft";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: #7a7a7a;
+    margin: 2%;
+  }
+  .go {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .cover {
+    background: #ffffff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    width: 100%;
+    height: 5vw;
+  }
+  .line1 {
+    font-family: "Proxima Nova Soft";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #111111;
+    margin: 2%;
+    width: 100%;
+  }
+  .acat {
+    display: flex;
+    align-items: center;
+   
+    
+  }
+  .alaram {
+    color: #7a7a7a;
+  }
+  .timeAlign {
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+   
+  }
+  .cd {
+    background-color: #fcbe4b;
+    border-radius: 6px;
+    min-width: fit-content;
+   
+    color: #000000;
+    cursor: pointer;
+    font-family: "Proxima Nova Soft";
+    font-style: normal;
+    font-weight: 400;
+    
+    
+   
+  }
+  

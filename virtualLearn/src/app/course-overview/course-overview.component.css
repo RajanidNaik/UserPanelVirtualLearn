@@ -1,0 +1,628 @@
+.my{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+line-height: 1.875rem;
+color: #2BB5F4;
+margin-block-end: 1%;
+
+}
+.fill{
+    position: absolute;
+    top:7rem;
+    left:8%;
+    right:8%;
+   
+}
+.box{
+    box-sizing: border-box;
+
+position: absolute;
+right: 0;
+top:4.5vh;
+width: 35%;
+height: 85vh;
+background: #FFFFFF;
+border: 1px solid #F0F0F0;
+border-radius: 6px;
+overflow: scroll;
+}
+.box::-webkit-scrollbar{
+    display: none;
+}
+.video{
+    
+    width: 50vw;
+height: 531px;
+background: rgba(0, 0, 0, 0.45);
+border-radius: 12px;
+
+}
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+.figma{
+    margin-block-start: 5%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 700;
+font-size: 1.125rem;
+line-height: 1.875rem;
+
+color: #111111;
+}
+.seven{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+line-height: 1.5rem;
+color: #111111;
+}
+.align{
+    display: flex;
+    width: 58%;
+    align-items: center;
+    justify-content: space-between;
+   
+    
+}
+.btn button{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.125rem;
+/* display: flex; */
+align-items: center;
+text-align: center;
+color: #000000;
+background: #FCBE4B;
+mix-blend-mode: normal;
+border-radius: 6px;
+border: none;
+padding: 5%;
+width:10vw
+}
+.line{
+    margin-block-start: 2%;
+    border: 1px solid #F0F0F0;
+   
+    width:60%;
+}
+.content{
+    margin-block-start: 2%;
+    width: 60%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.125rem;
+line-height: 1.625rem;
+color: #2BB5F4;
+}
+.detail{
+    margin-block-start: 2%;
+    width:60%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.125rem;
+line-height: 1.625rem;
+
+/* or 144% */
+text-align: justify;
+
+color: #000000;
+}
+span, .span{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.125rem;
+line-height: 1.5rem;
+
+text-transform: uppercase;
+
+color: #EE5C4D;
+cursor: pointer;
+}
+.boxDetail{
+    margin:3%;
+    display:flex;
+    gap:5%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.25rem;
+line-height: 3.125rem;
+text-align: center;
+
+color: #7A7A7A;
+cursor: pointer;
+}
+.active{
+   border-bottom: 1px solid #EC5D52;
+color: #EC5D52;
+cursor: pointer;
+}
+.include{
+    margin-block-start: 5%;
+    margin-left: 3%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 600;
+font-size: 1.25rem;
+line-height: 1.875rem;
+color: #111111;
+
+
+}
+.in{
+    font-family: 'Proxima Nova Soft';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #7A7A7A;
+}
+.inside{
+    margin-block-start: 4%;
+    margin-left: 3%;
+    display: flex;
+    gap:2%;
+    align-items: center;
+}
+.learn{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.125rem;
+line-height: 1.25rem;
+color: #111111;
+}
+li{
+    margin-left: 3%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.125rem;
+line-height: 1.625rem;
+color: #000000;
+
+
+}
+.space{
+    margin-left: 3%;
+    display: flex;
+   gap:5%;
+   align-items: center;
+}
+.space img{
+    width: 8em;
+    height: 8em;
+    border-radius: 4px;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.sirName{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.25rem;
+line-height: 1.875rem;
+color: #111111;
+}
+.link{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 1.25rem;
+color: #111111;
+}
+.about{
+    margin-block-start: 2%;
+    margin:3%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.25rem;
+line-height: 1.625rem;
+color: #000000;
+
+
+}
+.join button{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 600;
+font-size: 1.875rem;
+line-height: 3.125rem;
+text-align: center;
+color: #FFFFFF;
+border: none;
+background: #EC5D52;
+border-radius: 0px;
+position: absolute;
+left:50%;
+     transform: translate(-50%);
+     cursor: pointer;
+     padding-left: 30%;
+     padding-right: 30%;
+
+}
+small{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 400;
+font-size: 1rem;
+line-height: 1.875rem;
+color: #7A7A7A;
+}
+.course{
+    margin-left:3%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1rem;
+line-height: 1.25rem;
+color: #111111;
+margin-block-end: 4%;
+}
+.add{
+    margin:1%;
+    margin-block-start: 2%;
+    margin-left: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.chap{
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 600;
+font-size: 1.125rem;
+line-height: 1.875rem;
+color: #042C5C;
+
+}
+.plus{
+    color: #EC5D52;
+    cursor:pointer;
+}
+.chapOn{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 600;
+font-size: 1.125rem;
+line-height: 1.875rem;
+color: #111111;
+}
+.step{
+    margin-block-end: 2%;
+    display: flex;
+    align-items: center;
+    gap:4%;
+    background: #F9F9F9;
+    border-radius: 6px;
+    width: 35vw;
+}
+.ten{
+    font-family: 'Proxima Nova Soft';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 1.875rem;
+    color: #373737;
+}
+.tenline{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.125rem;
+line-height: 1.25rem;
+color: #042C5C;
+width: 18vw;
+
+}
+.min{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 0.875rem;
+line-height: 1.875rem;
+color: #7A7A7A;
+
+
+}
+.mins{
+    font-size: .6vw;
+}
+::ng-deep .mat-step-header .mat-step-icon-selected {
+    background-color: #1EAB0D; 
+ }
+ .st{
+    color:#fff;
+    background-color: #1EAB0D;
+    border-radius: 50%;
+    padding: 5%;
+ }
+ .videoButton{
+    position: absolute;
+   top:45%;
+   left:20%;
+  
+   
+   
+ }
+ .videoButton button{
+    background: #EC5D52;
+    border-radius: 6px;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.75rem;
+line-height: 3.125rem;
+text-align: center;
+color: #FFFFFF;
+cursor: pointer;
+border:none;
+
+ }
+ .playButton{
+    position: absolute;
+   top:19%;
+   left:15%;
+   width: 30%;
+height: 21.25rem;
+background: #FFFFFF;
+border-radius: 6px;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-block-end: 5%;
+ }
+ .btnline{
+    margin:5%;
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 400;
+font-size: 1.375rem;
+line-height: 1.625rem;
+text-align: center;
+
+color: #111111;
+ }
+ .watch button{
+   
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.75rem;
+line-height: 3.125rem;
+
+text-align: center;
+
+color: #FFFFFF;
+border:none;
+background: #EC5D52;
+border-radius: 6px;
+margin-block-end: 5%;
+cursor: pointer;
+width:20rem
+
+ }
+ .pause button{
+   
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.75rem;
+line-height: 3.125rem;
+text-align: center;
+
+color: #FFFFFF;
+border:none;
+background: #072D5B;
+border-radius: 6px;
+cursor: pointer;
+width:20rem
+
+ }
+ .comp{
+    width: 58%;
+height: 15rem;
+background: #042C5C;
+border-radius: 2px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap:2rem;
+padding: 1%;
+
+ }
+ .join{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FFFFFF;
+border: 1px solid #F0F0F0;
+border-radius: 6px;
+width: 100%;
+height: 5.625rem;
+ }
+ .certiImg img{
+width:100%;
+
+ }
+ .certiImg{
+   width:90%;
+ }
+ .down{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .sline{
+    border: 1px solid #194882;
+    width: 0;
+    height: 50%;
+ }
+ .res{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 600;
+font-size: 1.25rem;
+line-height: 1.875rem;
+text-align: center;
+
+color: #FFFFFF;
+ }
+ .nine{
+    font-family: 'Proxima Nova Soft';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.125rem;
+    line-height: 3rem;
+    display: flex;
+    align-items: center;
+    
+    color: #1EAB0D;
+ }
+ .rate{
+    color:#fff
+ }
+ .joined{
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 1.25rem;
+text-align: center;
+
+color: #111111;
+ }
+ .date{
+    font-family: 'Proxima Nova';
+font-style: normal;
+font-weight: 600;
+font-size: 1.25rem;
+line-height: 1.25rem;
+text-align: center;
+color: #2BB5F4;
+ }
+ .cocerti{
+    font-family: 'Proxima Nova Soft';
+font-style: normal;
+font-weight: 500;
+font-size: 1.125rem;
+line-height: 1.875rem;
+color: #FFFFFF;
+ }
+ .csave{
+    color:#fff;
+ }
+ .completeColor{
+    color: #1EAB0D;
+ }
+
+
+
+ .vertical {
+    
+    height: 7.8em;
+    position: absolute;
+    top: 100%;
+    z-index: 0;
+    
+}
+.select-icon{
+   
+    margin-bottom: 5%;
+    position: relative;
+    
+}
+.cirlce-image{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.complete-course{
+    background-color: #1EAB0D;
+  
+}
+.complete-course-line{
+    border-left: 3px solid #1EAB0D;
+}
+
+.pending{
+    background-color: #E1E1E1;
+    
+}
+.pending-line{
+    border-left: 3px solid #E1E1E1;
+}
+.cirlce-image{
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.chapters,.sub-chapter,.select-icon,.s-c-d,.sub-course-details{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+.select-icon{
+   
+    margin-bottom: 5%;
+    position: relative;
+    
+}
+.sub-course-details{
+    width: 87%;
+    background-color: #F9F9F9;
+    padding: 2.5%;
+    border-radius: 6px;
+}
+.s-c-d{
+    justify-content: flex-start;
+    gap: 5%;
+}
+.z-index{
+    z-index: 1;
+}
+.margin{
+    margin: 2%;
+}
+.per{
+    font-family: 'Biko';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 40px;
+text-align: center;
+
+color: #1EAB0D;
+}
+.my{
+    cursor: pointer;
+}

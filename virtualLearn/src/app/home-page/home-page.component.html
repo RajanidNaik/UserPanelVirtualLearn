@@ -1,0 +1,127 @@
+<div class="head">
+  <div class="logo" routerLink="/home">
+    <img src="/assets/img_virtuallearn logo_splash 2.png" />
+  </div>
+  <div class="search">
+    <div class="searchBar">
+      <div class="display">
+        <div>
+          <input
+            class="searchField"
+            type="text"
+            placeholder=" Search"
+            (click)="onSearch()"
+            [(ngModel)]="keyWord"
+            (keyup)="searchData()"
+          />
+        </div>
+        <div>
+          <mat-icon class="searchIcon">search</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="search">
+      <img src="/assets/icn_filter_search@1.5x.png" (click)="openDialog()" />
+    </div>
+    <div *ngIf="search">
+      <mat-icon class="clean" (click)="closesearch()">clear</mat-icon>
+    </div>
+  </div>
+  <div class="profile">
+    <mat-icon>notifications</mat-icon>
+    <mat-icon (click)="onClick()">settings</mat-icon>
+    <div>
+      <img src="{{ image }}" />
+    </div>
+  </div>
+</div>
+<div class="sideBar" [class.hide]="hide">
+  <div class="side" routerLink="/mycourse">
+    <img src="/assets/GraduationCap.png" />
+    <div class="my">My&nbsp;course</div>
+  </div>
+  <div class="line"></div>
+  <div class="side">
+    <img src="/assets/UserCircle.png" />
+    <div class="my">My&nbsp;profile</div>
+  </div>
+  <div class="line"></div>
+  <div class="side" (click)="logOut()">
+    <img src="/assets/SignOut.png" />
+    <div class="my">logout</div>
+  </div>
+</div>
+
+<div *ngIf="search">
+  <div class="searchCourse">
+    <div class="searchContent">
+      <div *ngIf="!onSearchName">
+        <div *ngIf="CoursePresent">
+          <div class="top">Top&nbsp;Search</div>
+          <div class="set">
+            <div class="searchBox" *ngFor="let top of topSearch">
+              {{ top | titlecase }}
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div *ngIf="!CoursePresent">
+          <div class="ifCourse">No matching course</div>
+          <div class="try">Try a different search or browse categories</div>
+        </div>
+        <!---->
+        <div class="top">Search&nbsp;from&nbsp;Categories</div>
+        <div class="set">
+          <div
+            class="searchBox dalign"
+            *ngFor="let cat of category; index as i"
+          >
+            <div>
+              <img src="/assets/icn_categories suggestion_design.png" />
+            </div>
+
+            <div (click)="searchByCategory(cat)" [class.act]="cat == active">
+              {{ cat }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---->
+      <div *ngIf="onSearchName">
+        <div class="scroll" *ngIf="!filterCourse">
+          <div class="sAlign" *ngFor="let course of searchCourseDetails">
+            <div (click)="goToOverview(course)">
+              <img src="{{ course.courseImage }}" />
+            </div>
+            <div>
+              <div class="imageAlign" (click)="goToOverview(course)">
+                <div class="market">{{ course.courseTitle }}</div>
+                <div class="total">
+                  {{ course.courseContent.totalChapters }} Chapter
+                </div>
+                <div class="searchBox">{{ course.category }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+        <div class="scroll" *ngIf="filterCourse">
+          <div class="sAlign" *ngFor="let course of searchCourseDetails">
+            <div (click)="goToOverviewFilter(course)">
+              <img src="{{ course.image }}" />
+            </div>
+            <div>
+              <div class="imageAlign" (click)="goToOverviewFilter(course)">
+                <div class="market">{{ course.title }}</div>
+                <div class="total">{{ course.totalChapters }} Chapter</div>
+                <div class="searchBox">{{ course.category }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---->
+      </div>
+      <!---->
+    </div>
+  </div>
+</div>

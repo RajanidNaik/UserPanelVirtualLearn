@@ -1,0 +1,22 @@
+<div>
+  <div routerLink="/overview">
+    <app-home-page></app-home-page>
+  </div>
+  <div class="fill">
+    <div>
+      <div class="image">
+        <img src="/assets/img_moduletest_success_illustration.png" />
+        <div class="congro">Congratulations!</div>
+        <div class="cline">
+          <div>
+            You have completed Chapter {{ quizDetails.chapterNumber }} -&nbsp;{{
+              quizDetails.chapterTitle
+            }}
+          </div>
+          <div>Course:{{ courseTitle }}</div>
+          <div class="res" routerLink="/result">Result</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

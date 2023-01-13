@@ -1,0 +1,358 @@
+.dhoni {
+  position: absolute;
+
+  left: 7.2%;
+  top: 8rem;
+  font-family: "Biko";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 3.125rem;
+  color: #092963;
+}
+.hello {
+  position: absolute;
+
+  left: 7.1%;
+  top: 6rem;
+
+  font-family: "Biko";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.375rem;
+  line-height: 3.125rem;
+
+  color: #7a7a7a;
+}
+.fill {
+  position: absolute;
+  top: 12rem;
+  left: 6%;
+  right: 6%;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.onBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: brightness(90%);
+  background: rgba(55, 50, 50, 0.8);
+}
+
+.dot {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+
+  display: flex;
+  gap: 10%;
+}
+/* .onGo{
+display: flex;
+justify-content: space-between;
+
+
+  } */
+
+.lines {
+  font-family: "Biko";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+
+  color: #000000;
+}
+.onBox {
+  position: relative;
+  width: 22%;
+  height: 23vh;
+  margin-block-end: 2%;
+}
+/* .onGo img{
+    width:100%;
+    height: 100%;
+     object-fit: cover;
+     border-radius: 6px;
+     filter: brightness(90%);
+ 
+  } */
+.see {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 3.125rem;
+  text-align: right;
+
+  color: #7a7a7a;
+  cursor: pointer;
+}
+.cat {
+  position: absolute;
+  top: 42rem;
+}
+.choice {
+  position: absolute;
+  top: 48rem;
+}
+.design {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+.design img {
+  background: #e5e5e5;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+.course {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.course img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: brightness(90%);
+}
+
+.cbest {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.cbest img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 6px;
+  filter: brightness(90%);
+}
+.cbestOne {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.cbestOne img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 6px;
+  filter: brightness(90%);
+}
+.btn {
+  display: flex;
+  gap: 2%;
+  padding: 1%;
+}
+.btn button {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 3.125rem;
+  color: #7a7a7a;
+  width: 5rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+/* .btn button:hover{
+    background: #DFE7F4;
+border-radius: 6px;
+color: #092963;
+  } */
+.btn button.act {
+  background: #dfe7f4;
+  border-radius: 6px;
+  color: #092963;
+}
+
+.content {
+  width: 100%;
+  overflow-x: scroll;
+
+  display: flex;
+
+  justify-content: flex-start;
+}
+.onBox {
+  display: flex;
+  gap: 5%;
+  margin-right: 4%;
+  height: 13vw;
+  /* width: 26.28vw; */
+}
+.div-image {
+  width: 20vw;
+}
+
+.div-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  filter: brightness(90%);
+}
+.cTitle {
+  position: absolute;
+  top: 80%;
+  z-index: 1;
+  font-family: "Biko";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  padding: 0.5% 1%;
+
+  background-color: white;
+  border-radius: 6px;
+
+  border: 1px solid #e4e4e4;
+  min-width: fit-content;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+.onImage {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  margin: 1%;
+  width: 96%;
+}
+.onImage1 {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+
+  width: 100%;
+}
+.on {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+  margin-block-end: 20%;
+}
+
+.line {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 20px;
+  color: #ffffff;
+
+  height: 2rem;
+  width: 100%;
+}
+.chapter {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+
+  color: #ffffff;
+  margin-block-end: 2%;
+  overflow: hidden;
+}
+.chapter1 {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #7a7a7a;
+  margin: 2%;
+}
+.conti button {
+  float: right;
+  background: #ec5d52;
+  border-radius: 4px;
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 30px;
+  border: none;
+  color: #ffffff;
+  padding-left: 5%;
+  padding-right: 5%;
+  cursor: pointer;
+}
+.go {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cCat {
+  float: right;
+  text-align: center;
+
+  padding: 3%;
+  background-color: #fcbe4b;
+  border-radius: 6px;
+  min-width: fit-content;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  color: #000000;
+  cursor: pointer;
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+.cover {
+  background: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  width: 100%;
+  height: 5vw;
+}
+.line1 {
+  font-family: "Proxima Nova Soft";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111111;
+  margin: 2%;
+  width: 100%;
+}
+.acat {
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+.alaram {
+  color: #7a7a7a;
+}
+.timeAlign {
+  display: flex;
+  gap: 2%;
+}
+.cd {
+  width: 10vw;
+ 
+}

@@ -1,0 +1,408 @@
+{{final()}}
+
+<div>
+
+  <div>
+    <app-home-page></app-home-page>
+  </div>
+  <div class="fill">
+    <div class="my" *ngIf="overview" routerLink="/mycourse">My&nbsp;course&nbsp;&#10095;&nbsp;<small>Ongoing</small></div>
+    <!--chapter-->
+    <div class="my" *ngIf="chapter" routerLink="/mycourse">My&nbsp;course&nbsp;&#10095;&nbsp;Ongoing&nbsp;&#10095;&nbsp;<small>{{title}}</small></div>
+    <!---->
+    <div class="video" *ngIf="overview">
+      
+      <!-- <video controls width="100%" height="100%">
+        <source src="{{courseDetails.courseOverview.overViewId.previewThisCourse.videoLink}}" type="video/mp4" />
+        <source src="{{courseDetails.courseOverview.overViewId.previewThisCourse.videoLink}}" type="video/ogg" />
+      </video> -->
+
+
+
+      <vg-player  class="video" >
+        <vg-overlay-play></vg-overlay-play>
+        <vg-buffering></vg-buffering>
+        <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+        </vg-scrub-bar>
+        <vg-controls >
+            <vg-play-pause ></vg-play-pause>
+            <vg-playback-button></vg-playback-button>
+            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+            <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+            <vg-track-selector></vg-track-selector>
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+            <vg-fullscreen></vg-fullscreen>
+        </vg-controls>
+        <video [vgMedia]="$any(media)" #media [src]="preViewVideo" type="video/mp4" id="singleVideo" width="100%" height="100%"
+            preload="auto" crossorigin >
+            <!-- <source   type="video/mp4"> -->
+            <track kind="subtitles" label="English"
+                src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt" srclang="en" default>
+        </video>
+    </vg-player>
+
+
+
+
+    </div>
+    <!--chapter-->
+    <div class="video" *ngIf="chapter">
+        <!-- <video controls width="100%" height="100%">
+          <source src="" type="video/mp4" />
+          <source src="" type="video/ogg" />
+        </video> -->
+ 
+        <vg-player  class="video" (click)="onGoClick()">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>
+          <vg-scrub-bar>
+              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+              <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+          </vg-scrub-bar>
+          <vg-controls >
+              <vg-play-pause (click)="getVideoPauseTime()"></vg-play-pause>
+              <vg-playback-button></vg-playback-button>
+              <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+              <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+              <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+              <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+              <vg-track-selector></vg-track-selector>
+              <vg-mute></vg-mute>
+              <vg-volume></vg-volume>
+              <vg-fullscreen></vg-fullscreen>
+          </vg-controls>
+          <video [vgMedia]="$any(media)" #media [src]="video" type="video/mp4" id="singleVideo" width="100%" height="100%"
+              preload="auto" (ended)="completeVideo()" crossorigin >
+              <source   type="video/mp4">
+              <track kind="subtitles" label="English"
+                  src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt" srclang="en" default>
+          </video>
+      </vg-player>
+
+
+
+        <div class="videoButton" *ngIf="onGo" >
+            <button >Continue Chapter {{chapters.isEnrolled.ongoingVideo.chapterNo}} Lesson {{chapters.isEnrolled.ongoingVideo.lessonNo}}</button>
+            <!-- <button >Continue Chapter {{chapters.isEnrolled.ongoingChapter}} Lesson {{chapters.isEnrolled.ongoingSerialNumber}}</button> -->
+        </div>
+        
+      </div>
+
+      <!---->
+    <div class="align">
+      <div>
+        <div class="figma">
+          {{title}}
+        </div>
+        <div class="seven"> {{totalChpater}}&nbsp;Chapter&nbsp;|&nbsp;{{totalLesson || 10}}&nbsp;lessons</div>
+      </div>
+      <div class="btn">
+        <button>{{category}}</button>
+      </div>
+    </div>
+    <div *ngIf="chapter">
+      <div *ngIf="complete" class="comp">
+          <div>
+              <div class="res">Course&nbsp;Result</div>
+              <div class="nine">90%</div>
+              <div class="rate">approval&nbsp;rate</div>
+          </div>
+          <div class="sline"></div>
+          <div class="join">
+              <div>
+                  <div class="joined">Joined</div>
+                  <div class="date">02/04/2021</div>
+              </div>
+              <div>
+                  <div class="joined">Completed</div>
+                  <div class="date">02/04/2021</div>
+              </div>
+              <div>
+                  <div class="joined">Duration</div>
+                  <div class="date">4h&nbsp;30m</div>
+              </div>
+          </div>
+          <div class="sline"></div>
+          <div class="certi">
+             
+              <div class="certiImg">
+                  <div class="down">
+                      <div class="cocerti">Course Certificate</div>
+                      <mat-icon class="csave">save_alt</mat-icon>
+                  </div>
+                  <img src="/assets/certificate-of-completion-_Virtuallearn2 1.png">
+              </div>
+              
+          </div>
+      </div>
+    </div>
+    <div class="line" *ngIf="overview"></div>
+    <div class="content" *ngIf="overview">
+      <!-- Learn how to design a beautiful and engaging mobile app with Figma.
+      Learn-by-doing approach. Learn how to design a beautiful and engaging
+      mobile app with Figma. Learn-by-doing approach. -->
+      {{courseOverviewLine}}
+    </div>
+    <div class="detail" *ngIf="overview">
+      
+      {{preview}}
+      <!-- Figma is a very powerful application that runs online. There are virtually
+      no platform boundaries when it comes to using figma because you can design
+      within a web browser or using their desktop application made for windows
+      and macs. Figma is similar to Sketch and Adobe XD but is the more powerful
+      of the three when it comes. Figma is a very powerful application that runs
+      online. There are virtually no platform boundaries when it comes to using
+      figma because you can design within a web browser or using their desktop
+      application made for windows and macs... -->
+      <div (click)="showMore()">
+        <span *ngIf="!more">Show&nbsp;more</span>
+        <div *ngIf="more">
+          Figma is a very powerful application that runs online. There are
+          virtually no platform boundaries when it comes to using figma because
+          you can design within a web browser or using their desktop application
+          made for windows and macs. Figma is similar to Sketch and Adobe XD but
+          is the more powerful of the three when it comes. Figma is a very
+          powerful application that runs online. There are virtually no platform
+          boundaries when it comes to using figma because you can design within
+          a web browser or using their desktop application made for windows and
+          macs...
+        </div>
+      </div>
+      <div (click)="showMore()" class="span" *ngIf="more">Show&nbsp;less</div>
+    </div>
+    <div class="box">
+      <div class="boxDetail">
+        <div [class.active]="overview" (click)="onOverview()">Overview</div>
+        <div [class.active]="chapter" (click)="onChapter()">Chapters</div>
+      </div>
+      <div *ngIf="overview">
+        <div class="include">Course&nbsp;Includes</div>
+        <div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course.png"
+            />
+            <div class="in" routerLink="/final">3.5&nbsp;total&nbsp;hours&nbsp;video</div>
+          </div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course(1).png"
+            />
+            <div class="in">Support&nbsp;Files</div>
+          </div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course(2).png"
+            />
+            <div class="in">6 Module&nbsp;Test</div>
+          </div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course(3).png"
+            />
+            <div class="in">Full&nbsp;lifetime&nbsp;access</div>
+          </div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course(4).png"
+            />
+            <div class="in">
+              Access&nbsp;on&nbsp;mobile,&nbsp;desktop&nbsp;and&nbsp;tv
+            </div>
+          </div>
+          <div class="inside">
+            <img
+              src="/assets/08.2_VirtualLearn_Home_categories_design_course(5).png"
+            />
+            <div class="in">Certificate&nbsp;of&nbsp;Completion</div>
+          </div>
+        </div>
+        <div class="include">What&nbsp;you’ll&nbsp;learn</div>
+        <div class="inside" *ngFor="let learn of courseDetails.courseOverview.overViewId.whatYouWillLearn;">
+          <img src="/assets/Combined-Shape.png" />
+          <div class="learn">{{learn}}</div>
+        </div>
+        <div class="include">Requirements</div>
+        <div  *ngFor="let require of courseDetails.courseOverview.overViewId.requirements;">
+          <li>{{require}}</li>
+        </div>
+        <div class="include">Instructor</div>
+        <div>
+          <div class="space">
+            <!-- <img src="/assets/img_instructor1 copy@3x 1.png" /> -->
+            <img src="{{courseDetails.courseOverview.overViewId.instructor.instructorImage}}" />
+            <div class="name">
+              <div class="sirName">{{courseDetails.courseOverview.overViewId.instructor.name}}</div>
+              <div class="link">
+                <!-- User Interface teacher www.appledesigntips.com -->
+                {{courseDetails.courseOverview.overViewId.instructor.url}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about">
+          {{courseDetails.courseOverview.overViewId.instructor.description}}
+          <!-- Back in 2010, I started brainspin with a desire to design compelling
+          and engaging apps. For over 7 years, I have designed many high profile
+          web and iPhone applications. The applications range from 3D medical
+          aided web applications to project management applications for niche
+          industries. -->
+        </div>
+        <div class="about">
+            I am also the founder of a large local design organization, Salt Lake
+            Designers, where I and other local influencers help cultivate the
+            talents of up and coming UX designers through workshops and panel
+            discussions... 
+            <div (click)="showMores()">
+              <span *ngIf="!mores">Show&nbsp;more</span>
+              <div *ngIf="mores">
+                Figma is a very powerful application that runs online. There are
+                virtually no platform boundaries when it comes to using figma because
+                you can design within a web browser or using their desktop application
+                made for windows and macs. Figma is similar to Sketch and Adobe XD but
+                is the more powerful of the three when it comes. Figma is a very
+                powerful application that runs online. There are virtually no platform
+                boundaries when it comes to using figma because you can design within
+                a web browser or using their desktop application made for windows and
+                macs...
+              </div>
+          </div>
+          <div (click)="showMores()" class="span" *ngIf="mores">Show&nbsp;less</div>
+          <div class="join" *ngIf="courseDetails.isEnrolled == null">
+            <button (click)="enrollCourse()">Join&nbsp;course</button>
+          </div>
+      </div>
+      
+    </div>
+
+    <div *ngIf="chapter">
+      <div class="include">Course Content</div>
+      <div class="course">{{chapters.listOfChapters.courseContent.totalChapters}} Chapter | {{chapters.listOfChapters.courseContent.totalLessons}} lessons | {{chapters.listOfChapters.courseContent.totalTests}} Assignment Test | {{chapters.listOfChapters.courseContent.totalDuration | length}}h
+          total length</div>
+    
+    <div class="chapterList" *ngFor="let chapter of chapters.listOfChapters.totalChapters[0].chapters;index as i">
+      <div class="add">
+           <div class="chap" [class.completeColor]="chapter.chapterNumber <= chapterCompleted">Chapter {{chapter.chapterNumber}} - {{chapter.chapterTitle}}</div>
+           <div class="more" (click)="show(i)">
+              <mat-icon *ngIf="!shows[i]" class="plus">add</mat-icon >
+              <mat-icon *ngIf="shows[i]" class="plus"> remove</mat-icon>
+            </div>
+      </div>
+ <!-- <mat-stepper orientation="vertical" *ngIf="shows[i]">
+  <mat-step *ngFor = "let lesson of chapter.lessons;index as xyz">
+    <ng-template matStepLabel>
+      <div class="step" >
+          <div class="ten">{{lesson.serialNumberOfLesson}}</div>
+          <div >
+              <div class="tenline">{{lesson.title}}</div>
+                  <div class="min">{{lesson.duration | lessonDuration}}</div>
+          </div>
+          <div *ngIf="lesson.serialNumberOfLesson <= watchChapterNumber">
+              <img src="/assets/Red Play.png">
+          </div>
+          <div *ngIf="watchChapterNumber < lesson.serialNumberOfLesson">
+            <img src="/assets/grey play.png">
+        </div>
+      </div>
+    </ng-template>
+    <ng-template matStepperIcon="edit">
+      <mat-icon class="st">check</mat-icon>
+ </ng-template>
+  </mat-step>
+  <mat-step *ngIf="chapter.test != null">
+      <ng-template matStepLabel>
+        <div class="step">
+            <div class="ten">
+             <img src="/assets/Shape.png">
+            </div>
+            <div routerLink="/quiz">
+                <div class="tenline">{{chapter.test.testTitle}}
+                    </div>
+                    <div class="min">{{chapter.test.totalTimeAlloted | time}}  | {{chapter.test.totalQuestions}}</div>
+            </div>
+
+        </div>
+      </ng-template>
+    </mat-step>
+</mat-stepper> -->
+
+<!---->
+
+<div class="chapter-data" *ngIf="shows[i]">
+  <div class="margin">
+      <div class="sub-course">
+          <div class="select-icon" *ngFor = "let lesson of chapter.lessons;index as xyz">
+              <div class="cirlce-image" [class.complete-course]="lesson.serialNumberOfLesson <= watchChapterNumber" [class.pending]="watchChapterNumber < lesson.serialNumberOfLesson">
+                  <!-- <img src="/assets/Group 133.png" alt="" class="icon" *ngIf="watchChapterNumber > lesson.serialNumberOfLesson">-->
+                  <img src="../../assets/Ellipse 7.png" alt="" class="icon z-index" *ngIf="watchChapterNumber <= lesson.serialNumberOfLesson">
+                  <img src="../../assets/Vector.png" alt="" class="icon z-index" *ngIf="watchChapterNumber > lesson.serialNumberOfLesson"> 
+                  <div class = "vertical" *ngIf="(chapter.numberOfLessons-1) >= xyz && chapter.test != null" [class.complete-course-line]="watchChapterNumber > lesson.serialNumberOfLesson" [class.pending-line]="watchChapterNumber<= lesson.serialNumberOfLesson"></div>
+                  <div class = "vertical" *ngIf="(chapter.numberOfLessons-2) >= xyz && chapter.test == null" [class.complete-course-line]="watchChapterNumber > lesson.serialNumberOfLesson" [class.pending-line]="watchChapterNumber <= lesson.serialNumberOfLesson"></div>
+              </div>
+              
+              <div class="sub-course-details">
+                 <div class="s-c-d">
+                   <p class="ten">{{lesson.serialNumberOfLesson}}</p>
+                   <div class="couraseName">
+                       <p class="tenline" [class.lesson-completed]="lesson.serialNumberOfLesson <= watchChapterNumber">{{lesson.title}}</p>
+                   <p class="  min">{{lesson.duration | lessonDuration}}</p>
+                   </div>
+                 </div>
+                 <div >
+                     <img src="/assets/Red Play.png" alt="" class="icon1" *ngIf="lesson.serialNumberOfLesson <= watchChapterNumber" (click)="onClickVideo(lesson,chapter)" >
+                     <img src="/assets/grey play.png" alt="" class="icon1" *ngIf="watchChapterNumber < lesson.serialNumberOfLesson" (click)="openWatchDialog(lesson)" >
+                 </div>
+
+              </div>
+
+              
+              
+          </div>
+          <div class="select-icon" *ngIf="chapter.test != null" (click)="getQuestionList(chapters.isEnrolled.courseId,chapter.test._id,chapter)">
+           <div class="cirlce-image" [class.complete-course]="chapter.approvalRate != 0" [class.pending]="chapter.approvalRate == 0">
+            
+            <img src="../../assets/Ellipse 7.png" alt="" class="icon z-index" *ngIf="chapter.approvalRate == 0" >
+            <img src="../../assets/Vector.png" alt="" class="icon z-index" *ngIf="chapter.approvalRate != 0" >   
+                 
+                  
+               
+            </div>
+           
+           <div class="sub-course-details ">
+              <div class="s-c-d">
+                <p >
+                    <img src="/assets/Shape.png" alt="">
+                    
+                </p>
+                <div class="couraseName">
+                    <p class=" tenline">{{chapter.test.testTitle}}</p>
+                <p class="chapter-duration min">{{chapter.test.totalTimeAlloted | time}}  | {{chapter.test.totalQuestions}}&nbsp;Questions</p>
+                </div>
+                <div *ngIf="chapter.approvalRate != null">
+                  <p  class="per">{{chapter.approvalRate}}</p>
+                <p class="min mins">ApprovalRate</p>
+                </div>
+                
+              </div>
+             
+
+           </div>
+          </div>
+          
+
+
+
+
+
+
+
+<!---->
+    </div>
+  </div>
+  </div>
+</div>

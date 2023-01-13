@@ -1,0 +1,68 @@
+<div class="container">
+  <div class="close">
+    <mat-icon mat-dialog-close>clear</mat-icon>
+  </div>
+
+  <div class="list">
+    <div *ngFor="let qn of details.questions; index as i" class="gap">
+      <div class="align" *ngIf="i == index || index == null">
+        <div class="number">Question&nbsp;{{ i + 1 }}</div>
+        <div
+          class="cans"
+          *ngIf="
+            details.selectedAndActualAnswerSet[i][0] ==
+            details.selectedAndActualAnswerSet[i][1]
+          "
+        >
+          Correct answer
+        </div>
+        <div
+          class="cans wans"
+          *ngIf="
+            details.selectedAndActualAnswerSet[i][0] !=
+            details.selectedAndActualAnswerSet[i][1]
+          "
+        >
+          Wrong answer
+        </div>
+      </div>
+
+      <div class="qnName" *ngIf="i == index || index == null">{{ qn }}</div>
+      <div *ngIf="i == index || index == null">
+        <div class="option" *ngFor="let option of details.options[i]">
+          <div
+            class="opt-1"
+            [class.wg]="
+              option == details.selectedAndActualAnswerSet[i][0] &&
+              option != details.selectedAndActualAnswerSet[i][1]
+            "
+            [class.cr]="option == details.selectedAndActualAnswerSet[i][1]"
+          >
+            <mat-icon
+              *ngIf="
+                option != details.selectedAndActualAnswerSet[i][0] &&
+                option != details.selectedAndActualAnswerSet[i][1]
+              "
+              class="first"
+              >radio_button_unchecked</mat-icon
+            >
+            <mat-icon
+              *ngIf="option == details.selectedAndActualAnswerSet[i][1]"
+              class="second"
+              >check_circle</mat-icon
+            >
+            <mat-icon
+              *ngIf="
+                option == details.selectedAndActualAnswerSet[i][0] &&
+                option != details.selectedAndActualAnswerSet[i][1]
+              "
+              class="second"
+              >cancel</mat-icon
+            >
+            <div>{{ option }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

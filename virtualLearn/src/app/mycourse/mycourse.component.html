@@ -1,0 +1,89 @@
+<div>
+  <div>
+    <app-home-page></app-home-page>
+  </div>
+  <div class="fill" *ngIf="hide">
+    <div class="display">
+      <div class="my">My&nbsp;course</div>
+      <mat-icon>close</mat-icon>
+    </div>
+    <div class="image">
+      <img src="/assets/img_my course_empty@1.5x 1.png" />
+      <div class="what">What&nbsp;you&nbsp;learn&nbsp;first?</div>
+      <div class="your">your&nbsp;courses&nbsp;will&nbsp;go&nbsp;here</div>
+    </div>
+    <div class="cat">
+      Categories
+      <div class="design">
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+        <img src="/assets/Design.png" />
+      </div>
+    </div>
+  </div>
+
+  <div class="fill" *ngIf="!hide">
+    <div class="my">My&nbsp;course</div>
+    <div class="button">
+      <button [class.active]="onGo" (click)="onGoCourse()">Ongoing</button>
+      <button [class.active]="complete" (click)="onComplete()">
+        Completed
+      </button>
+    </div>
+    <div *ngIf="onGo" class="dis">
+      <div class="box" *ngFor="let course of onGoing">
+        <!-- <img src="/assets/Rectangle 25.png"> -->
+        <img src="{{ course.url }}" />
+        <div class="onImage">
+          <div class="on">Ongoing</div>
+          <div class="go">
+            <div class="line">{{ course.title }}</div>
+            <div class="chapter">
+              {{ course.chaptersCompleted }}/{{
+                course.totalChapters
+              }}&nbsp;Chapters
+            </div>
+            <div class="conti">
+              <button
+                (click)="getCourseId(course.courseId, course.title, course.url)"
+              >
+                Continue
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="complete" class="dis">
+      <div class="box" *ngFor="let course of completeCourseDetail">
+        <!-- <img src="/assets/Rectangle 29.png"> -->
+        <img src="{{ course.image }}" />
+        <div class="onImage">
+          <div class="on">Completed</div>
+          <div class="go">
+            <div class="line">{{ course.title }}</div>
+            <div class="chapter">
+              {{ course.approvalRate }}&nbsp;approval&nbsp;Rate
+            </div>
+            <div class="conti">
+              <button
+                (click)="getCourseId(course.courseId, course.title, course.url)"
+                (click)="getCertificate(course.certificate)"
+              >
+                View&nbsp;certificate
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

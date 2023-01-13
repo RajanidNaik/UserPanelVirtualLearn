@@ -1,0 +1,25 @@
+<div class="container" *ngIf="hide">
+  <div class="end">Do you want to end the test?</div>
+  <div class="still">You still have {{ timer | time }} remaining</div>
+  <div class="still">
+    If you want to check your answer again, press cancel button.
+  </div>
+  <div class="still">
+    If you want to end the test and submit your answers you can press submit
+    button.
+  </div>
+  <div class="buttons">
+    <button class="cancel" mat-dialog-close>Cancel</button>
+    <button class="sub" mat-dialog-close (click)="submitTest()">Submit</button>
+  </div>
+</div>
+<div class="container" *ngIf="!hide">
+  <div class="end">Time-up!!!</div>
+  <div class="still">
+    If you want to end the test and submit your answers you can press submit
+    button.
+  </div>
+  <div class="buttons">
+    <button class="sub" mat-dialog-close (click)="submitTest()">Submit</button>
+  </div>
+</div>

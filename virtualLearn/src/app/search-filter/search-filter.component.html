@@ -1,0 +1,81 @@
+<div class="container">
+  <div class="close">
+    <div class="search">
+      <p class="header">Search Filters</p>
+    </div>
+    <div class="icon">
+      <mat-icon mat-dialog-close>close</mat-icon>
+    </div>
+  </div>
+  <div class="top-search">
+    <p class="search-head">Search from Categories</p>
+    <div class="button-list">
+      <!--  [class.backgroundColor]="course == 'Design'" -->
+      <div
+        class="search-category"
+        *ngFor="let cat of category; index as i"
+        (click)="selectCourse(cat)"
+        [class.backgroundColor]="course.includes(cat)"
+      >
+        <span class="image">
+          <img src="/assets/icn_categories suggestion_design.png" alt="" />
+        </span>
+        <span class="category">
+          {{ cat }}
+        </span>
+      </div>
+    </div>
+    <div class="top-search">
+      <p class="search-head">Duration</p>
+      <div class="button-list">
+        <div
+          class="search-category"
+          (click)="selectDuration([2, 3], 0)"
+          [class.backgroundColor]="index.includes(0)"
+          [class.back]="duration.length == 0"
+        >
+          5/10 Chapters
+        </div>
+        <div
+          class="search-category"
+          (click)="selectDuration([3, 4], 1)"
+          [class.backgroundColor]="index.includes(1)"
+          [class.back]="duration.length == 0"
+        >
+          10/20 Chapters
+        </div>
+        <div
+          class="search-category"
+          (click)="selectDuration([4, 5], 2)"
+          [class.backgroundColor]="index.includes(2)"
+          [class.back]="duration.length == 0"
+        >
+          20/30 Chapters
+        </div>
+        <div
+          class="search-category"
+          (click)="selectDuration([5, 6], 3)"
+          [class.backgroundColor]="index.includes(3)"
+          [class.back]="duration.length == 0"
+        >
+          30/40 Chapters
+        </div>
+        <div
+          class="search-category"
+          (click)="selectDuration([4], 4)"
+          [class.backgroundColor]="index.includes(4)"
+          [class.back]="duration.length == 0"
+        >
+          50+ Chapters
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-submit">
+      <button class="filter" (click)="filter()" mat-dialog-close>
+        Apply Filter
+      </button>
+      <button class="cancel" (click)="clearData()">Clear All</button>
+    </div>
+  </div>
+</div>

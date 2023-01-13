@@ -1,0 +1,133 @@
+.color {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.close {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search {
+  width: 90%;
+  text-align: center;
+}
+.header {
+  font-family: "Proxima Nova Soft";
+  font-size: 2.4rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  margin: 0;
+  font-style: normal;
+}
+.top-search {
+  width: 100%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+.search-head {
+  font-family: "Proxima Nova Soft";
+  text-align: left;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #000;
+}
+.button-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+.top-search-button,
+.search-category {
+  width: fit-content;
+  padding: 0% 2%;
+  margin-bottom: 4%;
+  font-weight: bold;
+  font-size: 1.3rem;
+  font-family: "Proxima Nova Soft";
+}
+
+.search-category {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+
+  padding: 0.5% 1%;
+
+  background-color: white;
+  border-radius: 6px;
+
+  border: 1px solid #e4e4e4;
+  min-width: fit-content;
+  margin-right: 1.5em;
+  margin-bottom: 1.5em;
+  color: #2b2b2b;
+  cursor: pointer;
+}
+
+.width {
+  width: 70%;
+}
+
+.filter-submit {
+  width: 65%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3%;
+}
+.filter-submit button {
+  width: 40%;
+  font-size: 1.5rem;
+  font-family: Proxima Nova Soft;
+  padding: 2% 1%;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.filter {
+  background-color: #ee5c4d;
+  color: #fff;
+  cursor: pointer;
+}
+
+.active {
+  border: 2px solid #fcbe4b;
+}
+
+.padding {
+  padding: 1% 3%;
+}
+
+.backgroundColor {
+  background-color: #fcbe4b;
+}
+.back {
+  background-color: #fff;
+}
+.category-text {
+  font-family: Proxima Nova Soft;
+  font-size: 1.4rem;
+  white-space: nowrap;
+  margin-left: 0.5em;
+}
+
+.image-div {
+  width: 2em;
+  height: 2em;
+}
+
+.image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.margin-top {
+  padding-top: 0.7%;
+}
+.icon {
+  cursor: pointer;
+}
